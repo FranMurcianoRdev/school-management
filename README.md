@@ -1,3 +1,3 @@
-#Admin Dashboard App
+# Admin Dashboard App
 
 For this project, four types of roles have been designed: Admin, Teacher, Student and Parent. For each role, there are different dashboards and constraints. Next.js has been used to protect the routes. For example, the admin user has full access to all lists in the application, as well as to all information and can set events for the other users. Pagination has been done in the lists to facilitate searches and speed up database queries, as well as search functionality has been added to each distinct table. The admin also has the functionality to edit the pages, creating, editing or deleting records.
