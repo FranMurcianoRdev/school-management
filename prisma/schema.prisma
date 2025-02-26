@@ -68,6 +68,7 @@ model Parent {
 model Grade {
   id    Int @id @default(autoincrement())
   level Int @unique
+
   students Student[]
   classess Class[]
 }
@@ -76,6 +77,7 @@ model Class {
   id       Int    @id @default(autoincrement())
   name     String @unique
   capacity Int
+
   supervisorId  String?
   supervisor    Teacher?       @relation(fields: [supervisorId], references: [id])
   lessons       Lesson[]
@@ -149,6 +151,7 @@ model Attendance {
   id      Int      @id @default(autoincrement())
   date    DateTime
   present Boolean
+
   studentId String
   student   Student @relation(fields: [studentId], references: [id])
   lessonId  Int
@@ -161,6 +164,7 @@ model Event {
   description String
   startTime   DateTime
   endTime     DateTime
+
   classId Int?
   class   Class? @relation(fields: [classId], references: [id])
 }
